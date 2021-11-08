@@ -38,6 +38,15 @@ foreach ($listVoiture as $voiture){?>
         
             ?>
         </td>
+
+        <td>
+            <?php 
+
+                echo $voiture->getKilometers();
+        
+            ?>
+        </td>
+        
     </tr>
     <?php
 }

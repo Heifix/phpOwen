@@ -1,19 +1,40 @@
 <?php
-require_once('Controller/VoitureController.php');
 
-$voitureController= new VoitureController();
-$voitureController->index();
+$routes = [
+    0 => [
+        "controller" => "Voiture",
+        "function" => "index",
+        "requires" => [
+            0=>"Controller/VoitureController.php",
+            1=>"View/voitureView.php",
+            2=>"Model/Voiture.php"
 
-//ou
+        ]
+    ],
+    1 => [
+        "controller" => "Home",
+        "function" => "index",
+        "requires" => [
+            0=>"Controller/HomeController.php",
+            1=>"View/voitureView.php",
+            2=>"Model/Voiture.php"
 
-#(new VoitureContoller->index());
-//static
-#VoitureController::index();
+        ]
+    ]
+];
+
+$route = $routes[0];
+
+$requires = $route["requires"];
+
+foreach($requires as $require){
+    require_once $require;
+}
 
 
-//qu'est ce qu'il faire, liste location voiture (etat voiture, barre de recherche, bdd)
 
+$controllerString = $route["controller"]."Controller";
+$functionString = $route["function"];
 
-
-
-
+$controller = new $controllerString();
+$controller->$functionString();

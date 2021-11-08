@@ -8,8 +8,9 @@ class VoitureController{
             new Voiture('nom2','model2',5999),
             new Voiture('nom3','model3',6001)
         );
-
-    include_once "View/voitureView.php";
+        
+        var_dump($listVoiture);
+        include_once "View/voitureView.php";
         
     }
 }
