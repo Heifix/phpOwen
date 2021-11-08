@@ -1,12 +1,12 @@
 <?php
-require_once('voitureController.php');
+require_once('Controller/VoitureController.php');
 
 $voitureController= new VoitureController();
 $voitureController->index();
 
 //ou
 
-(new VoitureContoller->index());
+#(new VoitureContoller->index());
 //static
 #VoitureController::index();
 
