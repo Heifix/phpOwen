@@ -28,7 +28,7 @@ foreach ($listVoiture as $voiture){?>
             ?>
         </td>
         <td>
-        <form action="http://127.0.0.1/phpOwen/View/VoitureByIdView.php" method="get" target="_blank">
+        <form action="http://127.0.0.1/phpOwen/View/VoitureByIdView.php" method="get">
             <button type="submit">
                 <?php
                     $tempIdVoiture=$voiture->idAcheter;
