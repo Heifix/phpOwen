@@ -20,7 +20,7 @@ $routes = [
             1=>"Model/Voiture.php",
         ],
     ],
-    "voitureById" => [
+    "acheteurById" => [
         "controller" => "Acheteur",
         "function" => "index",
         "requires" => [
@@ -31,7 +31,17 @@ $routes = [
             4=>"Persistance/AcheteurPersistance.php",
         ]
     ],
-    
+    "voitureById" => [
+        "controller" => "Voiture",
+        "function" => "voitureByAcheteur",
+        "requires" => [
+            0=>"Controller/VoitureController.php",
+            1=>"Model/Voiture.php",
+            2=>"Model/Acheteur.php",
+            3=>"Persistance/VoiturePersistance.php",
+            4=>"Persistance/AcheteurPersistance.php",
+        ]
+    ],
 ];
 
 $route = $routes[$_GET['url']];

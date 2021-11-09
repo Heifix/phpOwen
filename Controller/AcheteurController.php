@@ -5,8 +5,6 @@ class AcheteurController{
         $listVoiture = VoiturePersistance::getByAcheteur($acheteur);
 
         include_once "View/Voiture/voitureView.php";
-
-        
     }
 }
 #lste 3 voitures

@@ -28,24 +28,13 @@ foreach ($listVoiture as $voiture){?>
             ?>
         </td>
         <td>
-        <form action="http://127.0.0.1/phpOwen/View/VoitureByIdView.php" method="get">
-            <button type="submit">
-                <?php
-                    $tempIdVoiture=$voiture->idAcheter;
-                    foreach ($listAcheteurs as $acheteur){
-                        if($acheteur->id == $tempIdVoiture){
-                            echo $acheteur->nom." ".$acheteur->prenom;
-                        }
-                    
-                    }
-                ?>
-            </button>
-        </form>
+            <?php
+                echo $acheteur->nom." ".$acheteur->prenom;
+            ?>
         </td>
     </tr>
-        <?php
-        
+    <?php
 }
 
-        ?>
+    ?>
 </table>
