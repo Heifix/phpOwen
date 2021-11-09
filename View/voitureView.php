@@ -1,4 +1,5 @@
-<?php 
+
+ <?php 
 
 echo '<h1>Liste des voitures de la concession</h1>';
 
@@ -8,8 +9,7 @@ echo '<h1>Liste des voitures de la concession</h1>';
 <tr>
     <th>Marque</th>
     <th>Modele</th>
-    <th>Km</th>
-    <th>Photo<th>
+    <th>IdAcheter<th>
 </tr>
 
 
@@ -19,40 +19,33 @@ foreach ($listVoiture as $voiture){?>
     <tr>
         <td>
             <?php 
-                echo $voiture->getName();
+                echo $voiture->name;
             ?>
         </td>
-            
         <td>
             <?php 
-            
-                echo $voiture->getModel();
-        
+                echo $voiture->model;
             ?>
         </td>
-            
         <td>
-            <?php 
-
-                echo $voiture->getKilometers();
-        
-            ?>
+        <form action="http://127.0.0.1/phpOwen/View/VoitureByIdView.php" method="get" target="_blank">
+            <button type="submit">
+                <?php
+                    $tempIdVoiture=$voiture->idAcheter;
+                    foreach ($listAcheteurs as $acheteur){
+                        if($acheteur->id == $tempIdVoiture){
+                            echo $acheteur->nom." ".$acheteur->prenom;
+                        }
+                    
+                    }
+                ?>
+            </button>
+        </form>
         </td>
-
-        <td>
-            <?php 
-
-                echo $voiture->getKilometers();
-        
-            ?>
-        </td>
-        
     </tr>
-    <?php
+        <?php
+        
 }
 
-?>
-
-
+        ?>
 </table>
-

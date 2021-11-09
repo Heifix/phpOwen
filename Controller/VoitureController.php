@@ -1,17 +1,42 @@
 <?php
-require_once("Model/Voiture.php");
-
 class VoitureController{
     public function index(){
         $listVoiture = array(
-            new Voiture('nom1','model1',6000),
-            new Voiture('nom2','model2',5999),
-            new Voiture('nom3','model3',6001)
+            new Voiture('Citroen','C3',6000,1),
+            new Voiture('Tesla','S',5999,2),
+            new Voiture('Ford','Mustang Shelby GT500',6001,1),
         );
-        
-        var_dump($listVoiture);
+
+        $listAcheteurs = array(
+            new Acheteur(1,"PELET","Fx"),
+            new Acheteur(2,"BOUTET","Owen"),
+
+
+        );
+
         include_once "View/voitureView.php";
+        include_once "View/voitureByIdView.php";
+
         
+    }
+
+    public function indexX($idacheteur){
+        $listVoiture = array(
+            new Voiture('Citroen','C3',6000,1),
+            new Voiture('Tesla','S',5999,2),
+            new Voiture('Ford','Mustang Shelby GT500',6001,1),
+        );
+
+        $listAcheteurs = array(
+            new Acheteur(1,"PELET","Fx"),
+            new Acheteur(2,"BOUTET","Owen"),
+
+
+        );
+
+        include_once "View/voitureView.php";
+        include_once "View/voitureByIdView.php";
+
     }
 }
 #lste 3 voitures
