@@ -8,4 +8,15 @@ class VoiturePersistance {
             new Voiture('Ford','Mustang Shelby GT500',6001,1),
         );
     }
+
+    public static function getByAcheteur($acheteur) {
+        $list = self::all();
+        $listVoitures = array();
+        foreach($list as $voiture){
+            if($voiture->idAcheteur === $acheteur->id){
+                $listVoitures[]=$voiture;
+            }
+        }
+        return $listVoitures;
+    }
 }

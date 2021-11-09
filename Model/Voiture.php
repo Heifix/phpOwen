@@ -4,14 +4,14 @@ class Voiture {
    public $name;
    public $model;
    public $kilometers;
-   public $idAcheter;
+   public $idAcheteur;
    //etc
 
-   public function __construct($name, $model,$kilometers,$idAcheter){
+   public function __construct($name, $model,$kilometers,$idAcheteur){
       $this->name = $name;
       $this->model = $model;
       $this->kilometers = $kilometers;
-      $this->idAcheter=$idAcheter;
+      $this->idAcheteur=$idAcheteur;
    }
 
    public function isSecondHand(){

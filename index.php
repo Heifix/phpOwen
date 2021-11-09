@@ -31,6 +31,7 @@ $routes = [
             4=>"Persistance/AcheteurPersistance.php",
         ]
     ],
+    
 ];
 
 $route = $routes[$_GET['url']];
@@ -41,7 +42,9 @@ foreach($requires as $require){
     require_once $require;
 }
 
-
+if(!isset($_GET['id'])){
+    $_GET['id']=null;
+}
 
 $controllerString = $route["controller"]."Controller";
 $functionString = $route["function"];
