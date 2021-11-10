@@ -8,7 +8,8 @@ class VoitureController{
         include_once "View/Voiture/voitureView.php";
     }
 
-    public function voitureByAcheteur($id){
+    public function voitureById($id){
+
         $acheteur = AcheteurPersistance::getById($id);
         $listVoiture = VoiturePersistance::getByAcheteur($acheteur);
 

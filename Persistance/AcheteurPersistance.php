@@ -11,8 +11,10 @@ class AcheteurPersistance {
     public static function getById($id) {
         $list = self::all();
         $return = null;
-        foreach($list as $acheteur)
-            if($acheteur->id == $id) 
+        foreach($list as $acheteur){
+            if($acheteur->id == $id){
                 return $acheteur;
+            }
+        }
     }
 }

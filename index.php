@@ -33,7 +33,7 @@ $routes = [
     ],
     "voitureById" => [
         "controller" => "Voiture",
-        "function" => "voitureByAcheteur",
+        "function" => "voitureById",
         "requires" => [
             0=>"Controller/VoitureController.php",
             1=>"Model/Voiture.php",
@@ -61,3 +61,4 @@ $functionString = $route["function"];
 
 $controller = new $controllerString();
 $controller->$functionString($_GET['id']);
+
