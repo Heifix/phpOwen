@@ -1,14 +1,14 @@
 
  <?php 
-        $listVoitureDifférente= array_diff($listVoitures,$listVoitures);
-        if(count($listVoitureDifférente) == 0){
-            echo '<h1>Liste des voitures de nom du mec';
-        }
-        else{
-            echo '<h1>Liste des voitures de la concession</h1>';
-        }
+    //     if($listVoitures==null){
+    //         $stringAcheteur =$voiture->acheteur->nom." ".$voiture->acheteur->prenom;
+    //         echo '<h1>Liste des voitures de nom du mec'.$stringAcheteur;
+    //     }
+    //     else{
+    //         echo '<h1>Liste des voitures de la concession</h1>';
+    //     }
 
-    
+    // die;
 
 ?>
 

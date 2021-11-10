@@ -12,7 +12,8 @@ class VoitureController{
 
         $acheteur = AcheteurPersistance::getById($id);
         $listVoiture = VoiturePersistance::getByAcheteur($acheteur);
-
+        foreach($listVoiture as $voiture){
+        }
         include_once "View/Voiture/voitureView.php";
     }
 }
