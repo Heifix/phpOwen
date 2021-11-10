@@ -15,13 +15,7 @@ class VoiturePersistance {
         $listVoitures = array();
         foreach($list as $voiture){
             if($voiture->acheteur->id == $unAcheteur->id){
-                
-                var_dump($voiture);
-                die;
-                $listVoitures =[ $voiture ];
-            }
-            elseif(isset($voiture->acheteur->id)){
-
+                $listVoitures[] = $voiture;
             }
         }
         return $listVoitures;
